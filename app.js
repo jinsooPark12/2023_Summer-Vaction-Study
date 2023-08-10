@@ -1,9 +1,12 @@
-const h1 = document.querySelector(".hello h1");
-let a = 0;
+const button = document.querySelector("#ckeck");
 
 function handleTitleClick() {
-    a++;
-    h1.innerText = "click : " + a;
+    button.classList.toggle("clicked");
+    if (button.className === "clicked") {
+        button.innerText = "취소";
+    } else {
+        button.innerText = "확인";
+    }
 }
 
-h1.addEventListener("click", handleTitleClick);
+button.addEventListener("click", handleTitleClick);
