@@ -1,6 +1,3 @@
-// 임의 아이디 : jinsoo
-// 임의 비밀번호 : wlstn1578@
-
 const loginForm = document.querySelector("#login-form");
 const loginInputId = document.querySelector("#login-form input#Id");
 const loginInputPassword = document.querySelector("#login-form input#Password");
@@ -13,7 +10,19 @@ const USERNAME_KEY_PW = "usernamePw";
 const savedUsernameID = localStorage.getItem(USERNAME_KEY_ID);
 const savedUsernamePW = localStorage.getItem(USERNAME_KEY_PW);
 
-function onLoginSubmit(event) {
+function onLoginSubmit(event) { // 임의의 아이디와 비밀번호 설정
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const usernameId = loginInputId.value;
+    const usernamePw = loginInputPassword.value;
+    localStorage.setItem(USERNAME_KEY_ID, usernameId);
+    localStorage.setItem(USERNAME_KEY_PW, usernamePw);
+
+    alert(`환영합니다 ${usernameId}님!`);
+    paintGreetings(usernameId);
+}
+
+function onChackLoginSubmit(event) { // 로그인
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const usernameId = loginInputId.value;
@@ -34,4 +43,8 @@ function paintGreetings(usernameId){
 }
 
 loginForm.classList.remove(HIDDEN_CLASSNAME);
-loginForm.addEventListener("submit", onLoginSubmit);
+if (savedUsernameID === null && savedUsernamePW === null) {
+    loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+    loginForm.addEventListener("submit", onChackLoginSubmit);
+}
