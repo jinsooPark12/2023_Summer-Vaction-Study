@@ -42,6 +42,7 @@ function paintGreetings(usernameId){
     greeting.innerText = `Hello ${usernameId}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
     clock.classList.remove(HIDDEN_CLASSNAME);
+    toDoForm.classList.remove(HIDDEN_CLASSNAME);
     document.body.appendChild(bgImage);
     loginPoto.classList.add(HIDDEN_CLASSNAME);
 }
