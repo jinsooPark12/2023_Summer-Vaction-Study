@@ -29,7 +29,6 @@ function hadnleToDoSubmit(event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
     toDoInput.value = "";
-    toDos.push(newTodo);
     paintToDo(newTodo);
     saveToDos();
 }
