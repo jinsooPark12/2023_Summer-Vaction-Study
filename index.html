@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X_UA_Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Study/style.css">
-    <title>MOMENTUM</title>
-</head>
-<body>
-    <h2 id="clock" class="hidden">00:00:00</h2>
-    <img id = poto class src="fahim-mohammed-EumgKI11Hns-unsplash.jpg">
+    <link rel="stylesheet" href="css/style1.css" />
+    <title>Momentum App</title>
+  </head>
+  <body>
+    <h2 id="clock">00:00:00</h2>
     <form id="login-form" class="hidden">
-        <input id = "Id"
-         required 
-         maxlength="15" 
-         type="text" 
-         placeholder="아이디"
-        />
-        <br>
-        <input id = "Password"
-         required 
-         maxlength="15" 
-         type="password" 
-         placeholder="비밀번호" 
-        />
-        <br>
-        <input type="submit" value="Log In" />
+      <input id = "Id"
+       required 
+       maxlength="15" 
+       type="text" 
+       placeholder="Your Name"
+      />
     </form>
-    <h1 id="greeting" class></h1>
-    <form id="todo-form" class="hidden">
-        <input type="text" placeholder="오늘 할 일" required />
+    <h1 class="hidden" id="greeting"></h1>
+    <form id="todo-form">
+      <input type="text" placeholder="Write a To Do and Press Enter" required />
     </form>
-    <ul id="todo-list" class="hidden"></ul>
-    <script src="Study/app.js"></script>
-    <script src="Study/Clock.js"></script>
-    <script src="Study/background.js"></script>
-    <script src="Study/ToDo.js"></script>
-</body>
+    <ul id="todo-list"></ul>
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background2.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
 </html>
