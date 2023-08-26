@@ -1,3 +1,32 @@
-.hidden {
-    display: none;
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body{
+    background-color:azure;
+    background-repeat:no-repeat;
+    background-size:cover;
+    font-family:'Russo One', sans-serif;
+    color:whitesmoke;
+}
+#container{
+    margin:0 auto;
+    margin-top:70px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    /* border:1px solid white; */
+    width:1480px;
+    height:800px;
+    background-color:rgba(128,128,128,0.5);
+}
+.hidden{
+    display:none;
+}
+.sat{
+    color:rgb(66,110,255);
+}
+.sun{
+    color:rgb(255,51,51);
+}
+.weekday{
+    color:white;
 }

@@ -3,37 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style1.css" />
+    <link rel="stylesheet" href="CSS/style1.css" />
+    <link rel="stylesheet" href="CSS/form.css" />
+    <link rel="stylesheet" href="CSS/side.css" />
     <title>Momentum App</title>
   </head>
-  <body>
-    <h2 id="clock">00:00:00</h2>
-    <form id="login-form" class="hidden">
-      <input id = "Id"
-       required 
-       maxlength="15" 
-       type="text" 
-       placeholder="Your Name"
-      />
-    </form>
-    <h1 class="hidden" id="greeting"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
+  <body>   
+    <div id="container">
+      <form id="login-form" class="hidden">
+        <input id = "name"
+        required 
+        maxlength="15" 
+        type="text" 
+        placeholder="Your Name"
+        />
+        <input type="submit" 
+        value="Log in" 
+        id="submit"
+        />
+      </form>
+      <div id="greeting-bg" class="hidden">
+        <h1 class="hidden" id="greeting"></h1>
+      </div>
+      <div id="quote">
+        <span></span>
+        <br>
+        <span></span>
+      </div>
+      <form id="todo-form">
+        <input type="text" 
+               placeholder="Write a To Do and Press Enter" 
+               required 
+               id="todo"/>
+      </form>
+      <ul id="todo-list">
+      </ul>
+      <div id="time">
+        <h2>Today is..</h2>
+        <h3 id="calendar">0000.00.00</h3>
+        <h3 id="day-week"></h3>
+        <h4 id="clock">00:00:00</h4>
+      </div>
+      <div id="weather">
         <span></span>
         <span></span>
+      </div>
+      <script src="js/greetings.js"></script>
+      <script src="js/clock.js"></script>
+      <script src="js/quotes.js"></script>
+      <script src="js/todo.js"></script>
+      <script src="js/weather.js"></script>
+      <script src="js/background2.js"></script>
+      <script src="js/calendar.js"></script>
     </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
-    <script src="js/greetings.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background2.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
   </body>
 </html>
